@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+body {
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Forum";
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  overflow: hidden;
+  height: 173vh;
+}
+header .header {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+header .header__burger {
+  display: none;
+  position: relative;
+  z-index: 999999;
+}
+header .header__burger span {
+  width: 60px;
+  height: 2px;
+  background: #000;
+}
+header .header__burger span:last-child {
+  margin-top: 10px;
+}
+header .header__burger span:first-child {
+  margin-bottom: 10px;
+  width: 46px;
+}
+header .header__logo {
+  cursor: pointer;
+  z-index: 999;
+}
+header .header__list ul {
+  width: 60vw;
+  list-style-type: none;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding: 0;
+  position: relative;
+  z-index: 999;
+}
+header .header__list ul li {
+  cursor: pointer;
+}
+header .header__call {
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #000;
+  background: none;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 100px;
+  margin-top: 13px;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+  transition: color 0.3s ease;
+  transition: background 0.3s ease;
+  color: #000;
+}
+header .header__call:hover {
+  transition: all 0.3s ease;
+  background: #000;
+  color: #fff;
+}
+header .header__call p {
+  margin: 0;
+}
+header .header__text {
+  color: #000;
+  position: relative;
+  z-index: 999;
+  text-align: center;
+  font-size: 21px;
+  letter-spacing: 11px;
+  font-weight: 400;
+  top: 1vh;
+}
+header .header__h1 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  top: -120px;
+  top: -14vh;
+  text-align: center;
+  font-size: 220px;
+  letter-spacing: 27px;
+  line-height: 143px;
+  font-style: normal;
+  font-weight: 400;
+}
+header .header__p {
+  position: relative;
+  z-index: 4;
+  color: #fff;
+  text-align: center;
+  font-size: 170px;
+  letter-spacing: 8px;
+  font-weight: 400;
+  top: -340px;
+  z-index: 6;
+}
+header .header__images {
+  max-height: 100vh;
+  position: relative;
+  top: -1262px;
+}
+header .header__images .img1 {
+  position: relative;
+  z-index: 1;
+  min-width: 100%;
+  background: url("img/sky.png") center/cover no-repeat;
+  min-height: 100vh;
+}
+header .header__images .img2 {
+  position: relative;
+  z-index: 1;
+  top: -67vh;
+  min-width: 100%;
+  background: url("img/1.png") center/cover no-repeat;
+  min-height: 100vh;
+}
+header .header__images .img3 {
+  position: relative;
+  z-index: 3;
+  top: -153vh;
+  max-width: 100%;
+  background: url("img/2.png") center/cover no-repeat;
+  min-height: 80vh;
+}
+header .header__images .img4 {
+  position: relative;
+  z-index: 7;
+  top: -211vh;
+  left: 166px;
+  max-width: 85%;
+  background: url("img/mountains.png") center/cover no-repeat;
+  min-height: 53vh;
+}
+header .header__images .img5 {
+  position: relative;
+  z-index: 999;
+  top: -259vh;
+  max-width: 70%;
+  left: 575px;
+  background: url("img/Rectangle.png") center/cover no-repeat;
+  min-height: 70vh;
+}
+header .header__images .img6 {
+  position: relative;
+  z-index: 999;
+  top: -330vh;
+  max-width: 100%;
+  background: url("img/Rectangle2.png") center/cover no-repeat;
+  min-height: 100vh;
+}
+header .header__images .img7 {
+  position: relative;
+  z-index: 999;
+  top: -430vh;
+  max-width: 100%;
+  background: url("img/gradient.png") center/cover no-repeat;
+  min-height: 100vh;
+}
+header .header__images .img8 {
+  position: relative;
+  z-index: 999;
+  top: -540vh;
+  max-width: 100%;
+  background: url("img/gradient.png") center/cover no-repeat;
+  min-height: 100vh;
+}
+header .header__images .img9 {
+  position: relative;
+  z-index: 999;
+  top: -6000px;
+  top: -630vh;
+  max-width: 100%;
+  background: url("img/gradient.png") center/cover no-repeat;
+  min-height: 100vh;
+}
+
+@media (max-width: 1023px) {
+  header .header {
+    flex-direction: row-reverse;
+  }
+  header .header__burger {
+    display: block;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  header .header__burger span {
+    display: block;
+    background: #fff;
+  }
+  header .header__list {
+    overflow: hidden;
+    position: absolute;
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 9999;
+    color: #fff;
+    left: 0;
+    top: -1000px;
+    padding-top: 150px;
+    transition: top 0.4s ease;
+  }
+  header .header__list.active {
+    transition: top 0.4s ease;
+    top: 0;
+  }
+  header .header__list ul {
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+  header .header__list ul li {
+    margin-bottom: 20px;
+  }
+  header .header__images {
+    top: -685px;
+  }
+  header .header__text {
+    top: 80px;
+    font-size: 20px;
+  }
+  header .header__h1 {
+    font-size: 110px;
+    letter-spacing: 8px;
+    line-height: 72px;
+    top: 20px;
+  }
+  header .header__p {
+    font-size: 70px;
+    top: -90px;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

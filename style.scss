@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+body {
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Forum';
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    height: 173vh;
+    
+    & .header{
+        display: flex;
+        width: 95%;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 20px;
+
+        &__burger {
+            display: none;
+            position: relative;
+            z-index: 999999;
+
+            & span {
+                width: 60px;
+                height: 2px;
+                background: #000;
+
+                &:last-child {
+                    margin-top: 10px;
+                }
+
+                &:first-child {
+                    margin-bottom: 10px;
+                    width: 46px;
+                }
+            }
+        }
+
+        &__logo {
+            cursor: pointer;
+            z-index: 999;
+            
+            // & img {
+            //     width: 100%;
+            // }
+        }
+
+        &__list {
+            & ul {
+                width: 60vw; 
+                list-style-type: none;
+                display: flex;
+                font-size: 16px;
+                font-weight: 400;
+                justify-content: space-between;
+                // margin: 0 auto;
+                margin-top: 25px;
+                padding: 0;
+                position: relative;
+                z-index: 999;
+
+
+                & li {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__call {
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid #000;
+            background: none;
+            height: 100%;
+            padding: 10px 20px;
+            border-radius: 100px;
+            margin-top: 13px;
+            cursor: pointer;
+            position: relative;
+            z-index: 999;
+            transition: color 0.3s ease;
+            transition: background 0.3s ease;
+            color: #000;
+            
+            &:hover {
+                transition: all 0.3s ease;
+                background: #000;
+                color: #fff;
+            }
+
+            & p {
+                margin: 0;
+            }
+        }
+
+        &__text {
+            color: #000;
+            position: relative;
+            z-index: 999;
+            text-align: center;
+            font-size: 21px;
+            letter-spacing: 11px;
+            font-weight: 400;
+            // top: 20px;
+            top: 1vh;
+        }
+
+        &__h1 {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            top: -120px;
+            top: -14vh;
+            text-align: center;
+            font-size: 220px;
+            letter-spacing: 27px;
+            line-height: 143px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        &__p {
+            position: relative;
+            z-index: 4;
+            color: #fff;
+            text-align: center;
+            font-size: 170px;
+            letter-spacing: 8px;
+            font-weight: 400;
+            top: -340px;
+            z-index: 6;
+        }
+
+        &__images {
+            max-height: 100vh;
+            // min-width: 100%;
+            position: relative;
+            top: -1262px;
+            // overflow: hidden;
+
+            & .img1 {
+                position: relative;
+                z-index: 1;
+                // top: -190px;
+                min-width: 100%;
+                // background: #000;
+                background: url('img/sky.png') center / cover no-repeat;
+                min-height: 100vh;
+            }
+
+            & .img2 {
+                position: relative;
+                z-index: 1;
+                // top: -630px;
+                top: -67vh;
+                min-width: 100%;
+                // background: #000;
+                background: url('img/1.png') center / cover no-repeat;
+                min-height: 100vh;
+            }
+
+            & .img3 {
+                position: relative;
+                z-index: 3;
+                // top: -1440px;
+                top: -153vh;
+                max-width: 100%;
+                // background: #000;
+                background: url('img/2.png') center / cover no-repeat;
+                min-height: 80vh;
+            }
+
+            & .img4 {
+                position: relative;
+                z-index: 7;
+                // top: -1980px;
+                top: -211vh;
+                left: 166px;
+                max-width: 85%;
+                // background: #000;
+                background: url('img/mountains.png') center / cover no-repeat;
+                min-height: 53vh;
+            }
+
+            & .img5 {
+                position: relative;
+                z-index: 999;
+                // top: -2440px;
+                top: -259vh;
+                max-width: 70%;
+                // background: #000;
+                left: 575px;
+                background: url('img/Rectangle.png') center / cover no-repeat;
+                min-height: 70vh;
+                // background: #000;
+            }
+
+            & .img6 {
+                position: relative;
+                z-index: 999;
+                // top: -3113px;
+                top: -330vh;
+                max-width: 100%;
+                // background: #000;
+                // left: 600px;
+                background: url('img/Rectangle2.png') center / cover no-repeat;
+                min-height: 100vh;
+                // background: #000;
+            }
+
+            & .img7 {
+                position: relative;
+                z-index: 999;
+                // top: -4140px;
+                top: -430vh;
+                max-width: 100%;
+                // background: #000;
+                // left: 600px;
+                background: url('img/gradient.png') center / cover no-repeat;
+                min-height: 100vh;
+                // background: #000;
+            }
+
+            & .img8 {
+                position: relative;
+                z-index: 999;
+                // top: -5000px;
+                top: -540vh;
+                max-width: 100%;
+                // background: #000;
+                // left: 600px;
+                background: url('img/gradient.png') center / cover no-repeat;
+                min-height: 100vh;
+                // background: #000;
+            }
+
+            & .img9 {
+                position: relative;
+                z-index: 999;
+                top: -6000px;
+                top: -630vh;
+                max-width: 100%;
+                // background: #000;
+                // left: 600px;
+                background: url('img/gradient.png') center / cover no-repeat;
+                min-height: 100vh;
+                // background: #000;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+
+    header {
+
+        .header {
+            // display: flex;
+            flex-direction: row-reverse;
+            // width: 59%;
+            // margin: 0;
+            // justify-content: flex-start;
+    
+            &__burger {
+                display: block;
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                width: 100px;
+                align-items: flex-end;
+                justify-content: center;
+                
+                & span {
+                    display: block;
+                    background: #fff;
+
+                    // &.active {
+                    // }
+                }
+            }
+    
+            &__list {
+                // display: block;
+                overflow: hidden;
+                position: absolute;
+                background: #000;
+                height: 100vh;
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+                z-index: 9999;
+                color: #fff;
+                left: 0;
+                top: -1000px;
+                padding-top: 150px;
+                transition: top 0.4s ease;
+
+                &.active {
+                    transition: top 0.4s ease;
+                    top: 0;
+                }
+
+                & ul {
+                    display: block;
+                    margin: 0 auto;
+                    font-size: 30px;
+
+                    & li {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            &__images {
+                top: -685px;
+            }
+
+            &__text {
+                top: 80px;
+                font-size: 20px;
+            }
+
+            &__h1 {
+                font-size: 110px;
+                letter-spacing: 8px;
+                line-height: 72px;
+                top: 20px;
+            }
+
+            &__p {
+                font-size: 70px;
+                top: -90px;
+            }
+        }
+    }
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
