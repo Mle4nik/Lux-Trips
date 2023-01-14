@@ -19,16 +19,26 @@ function resize () {
 
 window.onresize = resize
 
-const burger = document.getElementById('burger')
+const burger = document.querySelector('.header__burger')
 const burgerList = document.querySelector('.header__list')
 const burgerSpan = document.querySelectorAll('.burger__span')
-console.log(burgerSpan)
+const body = document.body
+// console.log(body)
+// console.log(burgerSpan)
 
 burgerSpan.forEach(el => {
-    console.log(el)
+    // console.log(el)
     // burgerSpan.classList.toggle('active')
 })
 
 burger.addEventListener('click', function () {
     burgerList.classList.toggle('active')
+    burger.classList.toggle('active')
+    body.classList.toggle('active')
 })
+
+
+window.onload = function () {
+    let preload = document.getElementById('preloader')
+    preload.style.display = 'none'
+}
