@@ -46,7 +46,10 @@ header .header__burger span:first-child {
 }
 header .header__logo {
   cursor: pointer;
-  z-index: 999;
+  z-index: 9999999;
+}
+header .header__list .vector {
+  display: none;
 }
 header .header__list ul {
   width: 60vw;
@@ -66,7 +69,7 @@ header .header__list ul li {
 header .header__call {
   font-size: 16px;
   font-weight: 400;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   background: none;
   height: 100%;
   padding: 10px 20px;
@@ -74,15 +77,15 @@ header .header__call {
   margin-top: 13px;
   cursor: pointer;
   position: relative;
-  z-index: 999;
+  z-index: 9999999;
   transition: color 0.3s ease;
   transition: background 0.3s ease;
   color: #000;
 }
 header .header__call:hover {
   transition: all 0.3s ease;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 header .header__call p {
   margin: 0;
@@ -309,61 +312,82 @@ header .header__images .img9 {
     justify-content: center;
     cursor: pointer;
   }
-  header .header__burger.active span {
+  header .header__burger.is-active span {
     background: #fff;
-    transition: background 0.4s ease;
-    margin-top: 13px;
+    transition: background 0.3s ease;
+    margin-top: 0;
   }
-  header .header__burger.active span:nth-child(2) {
+  header .header__burger.is-active span:nth-child(2) {
     display: none;
   }
-  header .header__burger.active span:first-child {
-    margin-bottom: 0;
+  header .header__burger.is-active span:first-child {
+    margin-bottom: -2px;
     width: 60px;
     rotate: 45deg;
-    transition: all 0.4s ease;
+    transition: margin 0.3s ease 0s, rotate 0.3s ease 0.3s;
   }
-  header .header__burger.active span:last-child {
-    margin-top: -2px;
+  header .header__burger.is-active span:last-child {
+    margin-top: 0;
     rotate: -45deg;
-    transition: all 0.4s ease;
+    transition: margin 0.3s ease 0s, rotate 0.3s ease 0.3s;
+  }
+  header .header__burger.back-active span:first-child {
+    transition: rotate 0.3s ease 0s, margin 0.3s ease 0.3s;
+  }
+  header .header__burger.back-active span:last-child {
+    transition: rotate 0.3s ease 0s, margin 0.3s ease 0.3s;
   }
   header .header__burger span {
     display: block;
     transition: background 0.3s ease;
-    background: #000;
+    background: #fff;
   }
   header .header__list {
     overflow: hidden;
     position: fixed;
-    background: #000;
+    background: #E2D3CE;
     height: 100vh;
     width: 100%;
     text-align: center;
     margin: 0 auto;
     z-index: 9999;
-    color: #fff;
+    color: #000;
     left: 0;
     top: -1086px;
-    padding-top: 150px;
     transition: top 0.4s ease;
+  }
+  header .header__list .vector {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+  }
+  header .header__list .vector img {
+    margin: 0 auto;
+    margin-top: 126px;
+    height: 77vh;
   }
   header .header__list.active {
     transition: top 0.4s ease;
     top: 0;
   }
   header .header__list ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 88vh;
     margin: 0 auto;
     font-size: 30px;
+    justify-content: space-evenly;
+    padding-top: 77px;
+    width: 100%;
   }
   header .header__list ul li {
-    margin-bottom: 20px;
+    letter-spacing: 4px;
   }
 }
 @media (max-width: 767px) {
   header {
-    height: 160vh;
+    height: 158vh;
   }
   header .header {
     flex-direction: row-reverse;
@@ -421,71 +445,10 @@ header .header__images .img9 {
   header .header__images .img9 {
     top: -635vh;
   }
-  header .header__burger {
-    display: block;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 100px;
-    align-items: flex-end;
-    justify-content: center;
-    cursor: pointer;
-  }
-  header .header__burger.active span {
-    background: #fff;
-    transition: background 0.4s ease;
-    margin-top: 13px;
-  }
-  header .header__burger.active span:nth-child(2) {
-    display: none;
-  }
-  header .header__burger.active span:first-child {
-    margin-bottom: 0;
-    width: 60px;
-    rotate: 45deg;
-    transition: all 0.4s ease;
-  }
-  header .header__burger.active span:last-child {
-    margin-top: -2px;
-    rotate: -45deg;
-    transition: all 0.4s ease;
-  }
-  header .header__burger span {
-    display: block;
-    transition: background 0.3s ease;
-    background: #000;
-  }
-  header .header__list {
-    overflow: hidden;
-    position: fixed;
-    background: #000;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    z-index: 9999;
-    color: #fff;
-    left: 0;
-    top: -1086px;
-    padding-top: 150px;
-    transition: top 0.4s ease;
-  }
-  header .header__list.active {
-    transition: top 0.4s ease;
-    top: 0;
-  }
-  header .header__list ul {
-    display: block;
-    margin: 0 auto;
-    font-size: 30px;
-  }
-  header .header__list ul li {
-    margin-bottom: 20px;
-  }
 }
 @media (max-width: 575px) {
   header {
-    height: 150vh;
+    height: 148vh;
   }
   header .header {
     flex-direction: row-reverse;
@@ -537,67 +500,6 @@ header .header__images .img9 {
   header .header__images .img9 {
     top: -635vh;
   }
-  header .header__burger {
-    display: block;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 100px;
-    align-items: flex-end;
-    justify-content: center;
-    cursor: pointer;
-  }
-  header .header__burger.active span {
-    background: #fff;
-    transition: background 0.4s ease;
-    margin-top: 13px;
-  }
-  header .header__burger.active span:nth-child(2) {
-    display: none;
-  }
-  header .header__burger.active span:first-child {
-    margin-bottom: 0;
-    width: 60px;
-    rotate: 45deg;
-    transition: all 0.4s ease;
-  }
-  header .header__burger.active span:last-child {
-    margin-top: -2px;
-    rotate: -45deg;
-    transition: all 0.4s ease;
-  }
-  header .header__burger span {
-    display: block;
-    transition: background 0.3s ease;
-    background: #000;
-  }
-  header .header__list {
-    overflow: hidden;
-    position: fixed;
-    background: #000;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    z-index: 9999;
-    color: #fff;
-    left: 0;
-    top: -1086px;
-    padding-top: 150px;
-    transition: top 0.4s ease;
-  }
-  header .header__list.active {
-    transition: top 0.4s ease;
-    top: 0;
-  }
-  header .header__list ul {
-    display: block;
-    margin: 0 auto;
-    font-size: 30px;
-  }
-  header .header__list ul li {
-    margin-bottom: 20px;
-  }
 }
 ::-webkit-scrollbar {
   display: none;
@@ -610,7 +512,7 @@ header .header__images .img9 {
   height: 100vh;
   width: 100%;
   position: fixed;
-  z-index: 9999999;
+  z-index: 999999999;
   background: #fff;
 }
 

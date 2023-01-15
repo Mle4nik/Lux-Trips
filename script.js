@@ -33,8 +33,15 @@ const body = document.body
 
 burger.addEventListener('click', function () {
     burgerList.classList.toggle('active')
-    burger.classList.toggle('active')
     body.classList.toggle('active')
+    // burger.classList.toggle('is-active')
+    if (burger.classList.contains('is-active')) {
+        burger.classList.remove('is-active');
+        burger.classList.add('back-active');
+    } else {
+        burger.classList.add('is-active');
+        burger.classList.remove('back-active');
+    }
 })
 
 
