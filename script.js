@@ -21,15 +21,15 @@ window.onresize = resize
 
 const burger = document.querySelector('.header__burger')
 const burgerList = document.querySelector('.header__list')
-const burgerSpan = document.querySelectorAll('.burger__span')
+// const burgerSpan = document.querySelectorAll('.burger__span')
 const body = document.body
 // console.log(body)
 // console.log(burgerSpan)
 
-burgerSpan.forEach(el => {
-    // console.log(el)
-    // burgerSpan.classList.toggle('active')
-})
+// burgerSpan.forEach(el => {
+//     // console.log(el)
+//     // burgerSpan.classList.toggle('active')
+// })
 
 burger.addEventListener('click', function () {
     burgerList.classList.toggle('active')
