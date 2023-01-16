@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 body {
   margin: 0;
@@ -13,7 +14,7 @@ body.active {
 header {
   width: 100%;
   overflow: hidden;
-  height: 173vh;
+  height: 123vh;
 }
 header .header {
   display: flex;
@@ -141,7 +142,7 @@ header .header__images .img2 {
   z-index: 1;
   top: -67vh;
   min-width: 100%;
-  background: url("img/1.png") center/cover no-repeat;
+  background: url("img/mount1.png") center/cover no-repeat;
   min-height: 100vh;
 }
 header .header__images .img3 {
@@ -149,7 +150,7 @@ header .header__images .img3 {
   z-index: 3;
   top: -153vh;
   max-width: 100%;
-  background: url("img/2.png") center/cover no-repeat;
+  background: url("img/mount2.png") center/cover no-repeat;
   min-height: 80vh;
 }
 header .header__images .img4 {
@@ -203,9 +204,68 @@ header .header__images .img9 {
   min-height: 100vh;
 }
 
+main .carusel {
+  background: #E2D3CE;
+  height: 100%;
+}
+main .carusel__text {
+  position: relative;
+  text-align: center;
+  top: -400px;
+  z-index: 999;
+  max-height: 5vh;
+}
+main .carusel__text img {
+  position: relative;
+  top: 170px;
+  margin: 0;
+  padding: 0;
+}
+main .carusel__text p {
+  position: relative;
+  z-index: 9999;
+  font-size: 60px;
+  margin: 0;
+  padding: 0;
+}
+main .carusel .image-slider {
+  overflow: hidden;
+  padding: 30px 0 70px 0;
+  padding-left: 18vw;
+  padding-right: 18vw;
+}
+main .carusel .image-slider__wrapper .image-slider__slide .image-slider__image {
+  text-align: center;
+}
+main .carusel .image-slider__wrapper .image-slider__slide .image-slider__image img {
+  border-radius: 13px;
+  max-width: 100%;
+}
+main .carusel .image-slider .swiper-button-prev::after, main .carusel .image-slider .swiper-button-next::after {
+  color: #fff;
+  background: #79655E;
+  padding: 18px 25px;
+  position: relative;
+  top: 1050px;
+  cursor: pointer;
+}
+main .carusel .image-slider .swiper-button-prev::after {
+  margin-left: 15vw;
+  content: "🡤";
+  rotate: -45deg;
+}
+main .carusel .image-slider .swiper-button-next::after {
+  margin-right: 15vw;
+  content: "🡥";
+  rotate: 45deg;
+}
+main .carusel .image-slider .swiper-pagination {
+  display: none;
+}
+
 @media (max-width: 1399px) {
   header {
-    height: 168vh;
+    height: 110vh;
   }
   header .header__h1 {
     top: -80px;
@@ -247,10 +307,14 @@ header .header__images .img9 {
   header .header__images .img9 {
     top: -635vh;
   }
+  main .carusel__text p {
+    font-size: 50px;
+    top: 10px;
+  }
 }
 @media (max-width: 1023px) {
   header {
-    height: 165vh;
+    height: 105vh;
   }
   header .header {
     flex-direction: row-reverse;
@@ -319,6 +383,7 @@ header .header__images .img9 {
   }
   header .header__burger.is-active span:nth-child(2) {
     display: none;
+    transition: display 0s ease 0.3s;
   }
   header .header__burger.is-active span:first-child {
     margin-bottom: -2px;
@@ -387,7 +452,7 @@ header .header__images .img9 {
 }
 @media (max-width: 767px) {
   header {
-    height: 158vh;
+    height: 95vh;
   }
   header .header {
     flex-direction: row-reverse;
@@ -445,10 +510,18 @@ header .header__images .img9 {
   header .header__images .img9 {
     top: -635vh;
   }
+  main .carusel__text p {
+    font-size: 40px;
+    top: 60px;
+  }
+  main .carusel__text img {
+    top: 200px;
+    width: 100px;
+  }
 }
 @media (max-width: 575px) {
   header {
-    height: 148vh;
+    height: 80vh;
   }
   header .header {
     flex-direction: row-reverse;
@@ -499,6 +572,27 @@ header .header__images .img9 {
   }
   header .header__images .img9 {
     top: -635vh;
+  }
+  main .carusel__text p {
+    font-size: 30px;
+    top: 120px;
+  }
+  main .carusel__text img {
+    top: 230px;
+    width: 80px;
+  }
+  main .carusel .image-slider .swiper-button-prev, main .carusel .image-slider .swiper-button-next {
+    display: none;
+  }
+  main .carusel .image-slider .swiper-pagination {
+    display: block;
+    bottom: -46vh;
+  }
+  main .carusel .image-slider .swiper-pagination-bullet {
+    background: #79655E;
+    width: 30px;
+    height: 2px;
+    border-radius: 0;
   }
 }
 ::-webkit-scrollbar {

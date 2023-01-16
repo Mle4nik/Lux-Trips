@@ -6,6 +6,7 @@ body {
     list-style-type: none;
     font-family: 'Forum';
     width: 100%;
+    // transition: all 1s ease;
 
     &.active {
         overflow: hidden;
@@ -15,7 +16,8 @@ body {
 header {
     width: 100%;
     overflow: hidden;
-    height: 173vh;
+    // height: 173vh;
+    height: 123vh;
     
     & .header{
         display: flex;
@@ -174,7 +176,7 @@ header {
                 top: -67vh;
                 min-width: 100%;
                 // background: #000;
-                background: url('img/1.png') center / cover no-repeat;
+                background: url('img/mount1.png') center / cover no-repeat;
                 min-height: 100vh;
             }
 
@@ -185,7 +187,7 @@ header {
                 top: -153vh;
                 max-width: 100%;
                 // background: #000;
-                background: url('img/2.png') center / cover no-repeat;
+                background: url('img/mount2.png') center / cover no-repeat;
                 min-height: 80vh;
             }
 
@@ -269,9 +271,98 @@ header {
     }
 }
 
+
+main {
+
+    & .carusel {
+        background: #E2D3CE;
+        height: 100%;
+
+        &__text {
+            position: relative;
+            text-align: center;
+            top: -400px;
+            z-index: 999;
+            max-height: 5vh;
+
+            & img {
+                position: relative;
+                top: 170px;
+                margin: 0;
+                padding: 0;
+            }
+
+            & p {
+                position: relative;
+                z-index: 9999;
+                font-size: 60px;
+                margin: 0;
+                padding: 0;
+                // top: -175px;
+            }
+        }
+
+        & .image-slider {
+            // margin: 0;
+            overflow: hidden;
+            padding: 30px 0 70px 0;
+            padding-left: 18vw;
+            padding-right: 18vw;
+            // width: 100%;
+
+            &__wrapper {
+                // margin: 0;
+
+                & .image-slider__slide {
+                    // margin: 0;
+
+                    & .image-slider__image {
+                        // margin: 0;
+                        text-align: center;
+                        
+                        & img {
+                            // margin: 0;
+                            border-radius: 13px;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+
+            & .swiper-button-prev::after, .swiper-button-next::after {
+                color: #fff;
+                background: #79655E;
+                padding: 18px 25px;
+                position: relative;
+                // top: 111vh;
+                top: 1050px;
+                // z-index: 999999999;
+                cursor: pointer;
+            }
+            
+            & .swiper-button-prev::after {
+                margin-left: 15vw;
+                content: '🡤';
+                rotate: (-45deg);
+            }
+            
+            & .swiper-button-next::after {
+                margin-right: 15vw;
+                content: '🡥';
+                rotate: (45deg);
+            }
+
+            & .swiper-pagination {
+                display: none;
+            }
+        }
+    }
+}
+
+
 @media (max-width: 1399px) {
     header {
-        height: 168vh;
+        height: 110vh;
 
         & .header {
             &__h1 {
@@ -328,12 +419,26 @@ header {
             }
         }
     }
+
+    main {
+
+        & .carusel {
+
+            &__text {
+                
+                & p {
+                    font-size: 50px;
+                    top: 10px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1023px) {
 
     header {
-        height: 165vh;
+        height: 105vh;
         
         & .header {
             flex-direction: row-reverse;
@@ -425,6 +530,7 @@ header {
                 
                         &:nth-child(2) {
                             display: none;
+                            transition: display 0s ease 0.3s;
                         }
                     
                         &:first-child {
@@ -562,7 +668,7 @@ header {
 @media (max-width: 767px) {
 
     header {
-        height: 158vh;
+        height: 95vh;
         
         & .header {
             flex-direction: row-reverse;
@@ -640,12 +746,31 @@ header {
             }
         }
     }
+
+    main {
+
+        & .carusel {
+
+            &__text {
+                
+                & p {
+                    font-size: 40px;
+                    top: 60px;
+                }
+
+                & img {
+                    top: 200px;
+                    width: 100px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 575px) {
 
     header {
-        height: 148vh;
+        height: 80vh;
         
         & .header {
             flex-direction: row-reverse;
@@ -708,6 +833,56 @@ header {
     
                 & .img9 {
                     top: -635vh;
+                }
+            }
+        }
+    }
+
+    main {
+
+        & .carusel {
+
+            &__text {
+                
+                & p {
+                    font-size: 30px;
+                    top: 120px;
+                }
+
+                & img {
+                    top: 230px;
+                    width: 80px;
+                }
+            }
+
+            & .image-slider {
+    
+                // &__wrapper {
+    
+                //     & .image-slider__slide {
+    
+                //         & .image-slider__image {
+                            
+                //             & img {
+                //             }
+                //         }
+                //     }
+                // }
+    
+                & .swiper-button-prev, .swiper-button-next {
+                    display: none;
+                }
+    
+                & .swiper-pagination {
+                    display: block;
+                    bottom: -46vh;
+                
+                    &-bullet {
+                        background: #79655E;
+                        width: 30px;
+                        height: 2px;
+                        border-radius: 0;
+                    }
                 }
             }
         }
