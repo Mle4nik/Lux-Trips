@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
 body {
     margin: 0;
@@ -269,12 +270,102 @@ header {
             }
         }
     }
+
+    & .find {
+        width: 70%;
+        height: 150px;
+        // background: #fff;
+        position: absolute;
+        top: 100vh;
+        z-index: 999;
+        left: 15vw;
+        border-radius: 10px;
+
+        &__title {
+            background: #fff;
+            height: 50px;
+            width: 400px;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 50px;
+            position: relative;
+            top: 20px;
+            display: flex;
+            justify-items: center;
+            justify-content: center;
+
+            & p {
+                font-size: 33px;
+                margin: 10px;
+                position: relative;
+                z-index: 999;
+                color: #79655E;
+            }
+        }
+
+        &__search {
+            position: relative;
+            background: #fff;
+            height: 110px;
+            border-radius: 10px;
+            // margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            & .find-block {
+                font-family: 'Manrope';
+                // padding: 13px 44px;
+
+                &__title {
+                    display: flex;
+                    align-items: center;
+                    color: #79655E;
+
+                    & p {
+                        margin: 0;
+                        margin-left: 5px;
+                    }
+                }
+
+                &__text {
+                    font-weight: bold;
+
+                    & p {
+                        margin: 0;
+                        margin-left: 20px;
+
+                        // &:first-child {
+                            // margin-left: 15px;
+                        // }
+                    }
+                }
+
+            }
+
+            & .find__button {
+                background: #000;
+                padding: 20px 30px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                border-radius: 50px;
+
+                & p {
+                    font-size: 25px;
+                    margin: 0;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
 }
 
 
 main {
 
     & .carusel {
+        padding-top: 250px;
         background: #E2D3CE;
         height: 100%;
 
@@ -283,7 +374,7 @@ main {
             text-align: center;
             top: -400px;
             z-index: 999;
-            max-height: 5vh;
+            max-height: 0vh;
 
             & img {
                 position: relative;
@@ -334,8 +425,8 @@ main {
                 background: #79655E;
                 padding: 18px 25px;
                 position: relative;
-                // top: 111vh;
-                top: 1050px;
+                top: 132vh;
+                // top: 1050px;
                 // z-index: 999999999;
                 cursor: pointer;
             }
@@ -418,17 +509,32 @@ main {
                 }
             }
         }
+
+        & .find {
+            width: 80%;
+            left: 10vw;
+            top: 80vh;
+        }
     }
 
     main {
 
         & .carusel {
+            // background: linear-gradient(180deg, rgba(226, 211, 206, 1) 99%, #E2D3CE 100%);;
+            padding-top: 200px;
 
             &__text {
                 
                 & p {
                     font-size: 50px;
                     top: 10px;
+                }
+            }
+
+            & .image-slider {
+
+                & .swiper-button-prev::after, .swiper-button-next::after {
+                    top: 120vh;
                 }
             }
         }
@@ -662,6 +768,19 @@ main {
             //     top: -90px;
             // }
         }
+
+        & .find {
+            width: 96%;
+            left: 2vw;
+            top: 77vh;
+        }
+    }
+
+    main {
+
+        & .carusel {
+            padding-top: 200px;
+        }
     }
 }
 
@@ -745,11 +864,105 @@ main {
                 }
             }
         }
+
+        & .find {
+            width: 80%;
+            height: 150px;
+            // background: #fff;
+            position: absolute;
+            top: 70vh;
+            z-index: 999;
+            left: 10vw;
+            border-radius: 10px;
+    
+            &__title {
+                background: #fff;
+                height: 50px;
+                width: 330px;
+                text-align: center;
+                margin: 0 auto;
+                border-radius: 50px;
+                position: relative;
+                top: 20px;
+                display: flex;
+                justify-items: center;
+                justify-content: center;
+    
+                & p {
+                    font-size: 29px;
+                    margin: 10px;
+                    position: relative;
+                    z-index: 999;
+                    color: #79655E;
+                }
+            }
+    
+            &__search {
+                position: relative;
+                background: #fff;
+                height: 250px;
+                border-radius: 10px;
+                padding-top: 20px;
+                // margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+    
+                & .find-block {
+                    font-family: 'Manrope';
+                    // padding: 13px 44px;
+                    flex: 0 1 40%;
+                    padding-left: 20px;
+    
+                    &__title {
+                        display: flex;
+                        align-items: center;
+                        color: #79655E;
+    
+                        & p {
+                            margin: 0;
+                            margin-left: 5px;
+                        }
+                    }
+    
+                    &__text {
+                        font-weight: bold;
+    
+                        & p {
+                            margin: 0;
+                            margin-left: 20px;
+    
+                            // &:first-child {
+                                // margin-left: 15px;
+                            // }
+                        }
+                    }
+    
+                }
+    
+                & .find__button {
+                    background: #000;
+                    padding: 20px 30px;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 50px;
+    
+                    & p {
+                        font-size: 25px;
+                        margin: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }   
     }
 
     main {
 
         & .carusel {
+            padding-top: 350px;
 
             &__text {
                 
@@ -761,6 +974,25 @@ main {
                 & img {
                     top: 200px;
                     width: 100px;
+                }
+            }
+            
+            & .image-slider {
+    
+                & .swiper-button-prev, .swiper-button-next {
+                    display: none;
+                }
+        
+                & .swiper-pagination {
+                    display: block;
+                    bottom: -93vh;
+                    
+                    &-bullet {
+                        background: #79655E;
+                        width: 30px;
+                        height: 2px;
+                        border-radius: 0;
+                    }
                 }
             }
         }
@@ -836,11 +1068,109 @@ main {
                 }
             }
         }
+
+        & .find {
+            width: 80%;
+            height: 150px;
+            // background: #fff;
+            position: absolute;
+            top: 55vh;
+            z-index: 999;
+            left: 10vw;
+            border-radius: 10px;
+    
+            &__title {
+                background: #fff;
+                height: 50px;
+                width: 250px;
+                text-align: center;
+                margin: 0 auto;
+                border-radius: 50px;
+                position: relative;
+                top: 20px;
+                display: flex;
+                justify-items: center;
+                justify-content: center;
+    
+                & p {
+                    font-size: 24px;
+                    margin: 10px;
+                    position: relative;
+                    z-index: 999;
+                    color: #79655E;
+                }
+            }
+    
+            &__search {
+                position: relative;
+                background: #fff;
+                height: auto;
+                border-radius: 10px;
+                padding-top: 20px;
+                // margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+    
+                & .find-block {
+                    font-family: 'Manrope';
+                    // padding: 13px 44px;
+                    flex: 0 1 80%;
+                    // padding-left: 20px;
+                    padding-bottom: 10px;
+    
+                    &__title {
+                        display: flex;
+                        align-items: center;
+                        color: #79655E;
+    
+                        & p {
+                            margin: 0;
+                            margin-left: 5px;
+                        }
+                    }
+    
+                    &__text {
+                        font-weight: bold;
+    
+                        & p {
+                            margin: 0;
+                            margin-left: 20px;
+    
+                            // &:first-child {
+                                // margin-left: 15px;
+                            // }
+                        }
+                    }
+    
+                }
+    
+                & .find__button {
+                    background: #000;
+                    padding: 20px 30px;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50px;
+                    width: 70%;
+                    margin-bottom: 15px;
+    
+                    & p {
+                        font-size: 25px;
+                        margin: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }  
     }
 
     main {
 
         & .carusel {
+            padding-top: 370px;
 
             &__text {
                 
@@ -875,7 +1205,7 @@ main {
     
                 & .swiper-pagination {
                     display: block;
-                    bottom: -46vh;
+                    bottom: -83vh;
                 
                     &-bullet {
                         background: #79655E;

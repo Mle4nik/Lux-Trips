@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
 body {
   margin: 0;
   text-decoration: none;
@@ -203,8 +204,79 @@ header .header__images .img9 {
   background: url("img/gradient.png") center/cover no-repeat;
   min-height: 100vh;
 }
+header .find {
+  width: 70%;
+  height: 150px;
+  position: absolute;
+  top: 100vh;
+  z-index: 999;
+  left: 15vw;
+  border-radius: 10px;
+}
+header .find__title {
+  background: #fff;
+  height: 50px;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 50px;
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+header .find__title p {
+  font-size: 33px;
+  margin: 10px;
+  position: relative;
+  z-index: 999;
+  color: #79655E;
+}
+header .find__search {
+  position: relative;
+  background: #fff;
+  height: 110px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header .find__search .find-block {
+  font-family: "Manrope";
+}
+header .find__search .find-block__title {
+  display: flex;
+  align-items: center;
+  color: #79655E;
+}
+header .find__search .find-block__title p {
+  margin: 0;
+  margin-left: 5px;
+}
+header .find__search .find-block__text {
+  font-weight: bold;
+}
+header .find__search .find-block__text p {
+  margin: 0;
+  margin-left: 20px;
+}
+header .find__search .find__button {
+  background: #000;
+  padding: 20px 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+}
+header .find__search .find__button p {
+  font-size: 25px;
+  margin: 0;
+  margin-left: 10px;
+}
 
 main .carusel {
+  padding-top: 250px;
   background: #E2D3CE;
   height: 100%;
 }
@@ -213,7 +285,7 @@ main .carusel__text {
   text-align: center;
   top: -400px;
   z-index: 999;
-  max-height: 5vh;
+  max-height: 0vh;
 }
 main .carusel__text img {
   position: relative;
@@ -246,7 +318,7 @@ main .carusel .image-slider .swiper-button-prev::after, main .carusel .image-sli
   background: #79655E;
   padding: 18px 25px;
   position: relative;
-  top: 1050px;
+  top: 132vh;
   cursor: pointer;
 }
 main .carusel .image-slider .swiper-button-prev::after {
@@ -307,9 +379,20 @@ main .carusel .image-slider .swiper-pagination {
   header .header__images .img9 {
     top: -635vh;
   }
+  header .find {
+    width: 80%;
+    left: 10vw;
+    top: 80vh;
+  }
+  main .carusel {
+    padding-top: 200px;
+  }
   main .carusel__text p {
     font-size: 50px;
     top: 10px;
+  }
+  main .carusel .image-slider .swiper-button-prev::after, main .carusel .image-slider .swiper-button-next::after {
+    top: 120vh;
   }
 }
 @media (max-width: 1023px) {
@@ -449,6 +532,14 @@ main .carusel .image-slider .swiper-pagination {
   header .header__list ul li {
     letter-spacing: 4px;
   }
+  header .find {
+    width: 96%;
+    left: 2vw;
+    top: 77vh;
+  }
+  main .carusel {
+    padding-top: 200px;
+  }
 }
 @media (max-width: 767px) {
   header {
@@ -510,6 +601,83 @@ main .carusel .image-slider .swiper-pagination {
   header .header__images .img9 {
     top: -635vh;
   }
+  header .find {
+    width: 80%;
+    height: 150px;
+    position: absolute;
+    top: 70vh;
+    z-index: 999;
+    left: 10vw;
+    border-radius: 10px;
+  }
+  header .find__title {
+    background: #fff;
+    height: 50px;
+    width: 330px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50px;
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+  }
+  header .find__title p {
+    font-size: 29px;
+    margin: 10px;
+    position: relative;
+    z-index: 999;
+    color: #79655E;
+  }
+  header .find__search {
+    position: relative;
+    background: #fff;
+    height: 250px;
+    border-radius: 10px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  header .find__search .find-block {
+    font-family: "Manrope";
+    flex: 0 1 40%;
+    padding-left: 20px;
+  }
+  header .find__search .find-block__title {
+    display: flex;
+    align-items: center;
+    color: #79655E;
+  }
+  header .find__search .find-block__title p {
+    margin: 0;
+    margin-left: 5px;
+  }
+  header .find__search .find-block__text {
+    font-weight: bold;
+  }
+  header .find__search .find-block__text p {
+    margin: 0;
+    margin-left: 20px;
+  }
+  header .find__search .find__button {
+    background: #000;
+    padding: 20px 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+  }
+  header .find__search .find__button p {
+    font-size: 25px;
+    margin: 0;
+    margin-left: 10px;
+  }
+  main .carusel {
+    padding-top: 350px;
+  }
   main .carusel__text p {
     font-size: 40px;
     top: 60px;
@@ -517,6 +685,19 @@ main .carusel .image-slider .swiper-pagination {
   main .carusel__text img {
     top: 200px;
     width: 100px;
+  }
+  main .carusel .image-slider .swiper-button-prev, main .carusel .image-slider .swiper-button-next {
+    display: none;
+  }
+  main .carusel .image-slider .swiper-pagination {
+    display: block;
+    bottom: -93vh;
+  }
+  main .carusel .image-slider .swiper-pagination-bullet {
+    background: #79655E;
+    width: 30px;
+    height: 2px;
+    border-radius: 0;
   }
 }
 @media (max-width: 575px) {
@@ -573,6 +754,86 @@ main .carusel .image-slider .swiper-pagination {
   header .header__images .img9 {
     top: -635vh;
   }
+  header .find {
+    width: 80%;
+    height: 150px;
+    position: absolute;
+    top: 55vh;
+    z-index: 999;
+    left: 10vw;
+    border-radius: 10px;
+  }
+  header .find__title {
+    background: #fff;
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50px;
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+  }
+  header .find__title p {
+    font-size: 24px;
+    margin: 10px;
+    position: relative;
+    z-index: 999;
+    color: #79655E;
+  }
+  header .find__search {
+    position: relative;
+    background: #fff;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  header .find__search .find-block {
+    font-family: "Manrope";
+    flex: 0 1 80%;
+    padding-bottom: 10px;
+  }
+  header .find__search .find-block__title {
+    display: flex;
+    align-items: center;
+    color: #79655E;
+  }
+  header .find__search .find-block__title p {
+    margin: 0;
+    margin-left: 5px;
+  }
+  header .find__search .find-block__text {
+    font-weight: bold;
+  }
+  header .find__search .find-block__text p {
+    margin: 0;
+    margin-left: 20px;
+  }
+  header .find__search .find__button {
+    background: #000;
+    padding: 20px 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 70%;
+    margin-bottom: 15px;
+  }
+  header .find__search .find__button p {
+    font-size: 25px;
+    margin: 0;
+    margin-left: 10px;
+  }
+  main .carusel {
+    padding-top: 370px;
+  }
   main .carusel__text p {
     font-size: 30px;
     top: 120px;
@@ -586,7 +847,7 @@ main .carusel .image-slider .swiper-pagination {
   }
   main .carusel .image-slider .swiper-pagination {
     display: block;
-    bottom: -46vh;
+    bottom: -83vh;
   }
   main .carusel .image-slider .swiper-pagination-bullet {
     background: #79655E;
