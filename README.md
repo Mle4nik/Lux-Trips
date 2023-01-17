@@ -1,2 +1,2 @@
 # Lux-Trips
-luxury travel agency website
+premium travel agency website
